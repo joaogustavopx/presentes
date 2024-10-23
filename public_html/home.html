@@ -13,23 +13,92 @@
         </header>
         
         <nav class="row clearfix">
-            Menu
+            <ul>
+                <li>
+                    <a href="Index.html">Index</a>
+                </li>
+                
+                <li>
+                    <a href="listas.html">Listas</a>
+                </li>
+                
+                <li>
+                    <a href="produtos.html">Produtos</a>
+                </li>
+            </ul>
         </nav>
             
             <div class="row clearfix">
         
                 <section class="col-md-6">
-                    Região da Foto de Perfil
+                        <hr>
+                        <h2>
+                            <strong>
+                                Meu perfil
+                            </strong>
+                        </h2>
+                        <hr>
+                        <section class="col-md-6">
+                            <h4>Imagem de perfil</h4>
+                            <img src="..." alt="">
+                            <hr />
+                            <form method="post" enctype="multipart/form-data">
+                                <p><input type="file" name="arquivo"/></p>
+                                <p><button name="enviarFoto" type="submit">Enviar</button>
+                            </form>
+                        </section>
                 </section>
         
                 <section class="col-md-6">
-                    Região de dados Cadastrais e Criação e Exclusão da Lista
+                    <h4>Dados de Perfil</h4>
+                    <p>Nome: Usuário</p>
+                    <p>Email: usuario@email.com</p>
+                    <p><a href="#">Meu link </a></p>
+                    <p>Data de Criação: 12/12/2012</p>
+                    <br/>
+                    
+                    <div>
+                        <h3>Minha Lista</h3>
+                        <p>Nome: Lista de Aniversário</p>
+                        <form method="post">
+                            <input type="text" name="descricao" placeholder="Coloque aqui o nome de sua lista" required/>
+                            <button name="criarlista" type="submit">Criar Lista</button>
+                        </form>
+                    </div>
                 </section>
             </div>
             
             <div class="row clearfix">
                 <section class="col-md-6">
-                    Região de Produtos de Lista e Indicação para Amigos
+                    <h3>Itend da minha Lista</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th> Código </th>
+                                <th> Descrição </th>
+                                <th> Excluir </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <td>6</td>
+                        <td>Computador</td>
+                        <td>
+                            <form method="post"> <input type="hidden" name="codproduto" value="6">
+                                <button name="excluirItem" type="submit">Excluir</button>
+                        </form>
+                        </td>
+                        </tbody>
+                    </table>
+                </section>
+                
+                <section class="col-md-6">
+                    <h4>Indicar para um amigo</h4>
+                    <form method="post">
+                        <input type="hidden" name="link" value=""/>
+                        <p><input type="text" name="nome" placeholder="Nome" required></p>
+                        <p><input type="email" name="email" placeholder="E-mail" required></p>
+                        <p><button type="submit">Indicar</button></p>
+                    </form>
                 </section>
             </div>
         </div>
